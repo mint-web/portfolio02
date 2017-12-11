@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>경기문화포털</title>
+    <meta name="title" content="경기문화포털">
+    <meta name="description" content="경기도 문화예술정보 제공, 문화행사, 체험행사, 전시정보, 교육정보">
+    <link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="plugin/jquery-ui/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="plugin/jquery-ui/css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="plugin/slick/slick.css">
+ </head>
+
+<body>
+    <header id="header">
+        <nav class="gnb-area d-none d-lg-block">
+            <div role="presentation" class="container">
+                <ul role="menu" class="nav float-lg-left">
+                    <li role="presentation" class="nav-item"><a role="menuitem" class="menu-link" href="#" title="경기문화재단">경기문화재단</a></li>
+                    <li role="presentation" class="nav-item"><a role="menuitem" class="menu-link" href="#" title="컨텐츠 등록요청">컨텐츠 등록요청</a></li>
+                    <li role="presentation" class="nav-item"><a role="menuitem" class="menu-link" href="#" title="경기도청">경기도청</a></li>
+                </ul>
+                <ul role="menu" class="nav float-lg-right">
+                    <li role="presentation" class="nav-item"><a role="menuitem" class="menu-link" href="" title="로그인">로그인</a></li>
+                    <li role="presentation" class="nav-item"><a role="menuitem" class="menu-link" href="" title="회원가입">회원가입</a></li>
+                    <li role="presentation" class="nav-item search">
+                    <form role="form" class="form-inline float-md-right">
+                        <div class="search-group">
+                            <fieldset>
+                                <lable for="searchOptionFrm" class="sr-only">검색옵션</lable>
+                                <select role="listbox" name="searchOption" id="searchOption">
+                                    <option role="option" value="global" selected>통합검색</option>
+                                    <option role="option" value="notice">공지/공고</option>
+                                    <option role="option" value="event">문화/행사</option>
+                                    <option role="option" value="displayinfo">전시정보</option>
+                                    <option role="option" value="eduinfo">교육정보</option>
+                                    <option role="option" value="facility">문화시설</option>
+                                </select>
+                                <div class="search-wrap">
+                                    <lable for="searchFilter" class="sr-only">검색어 입력</lable><input type="search" name="query" id="totalSearch" class="form-control">
+                                    <button type="submit" value="검색" class="btn btn-secondary"><img src="images/search.svg" width="18" height="18" alt="검색"></button>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </form>
+                    </li>
+                </ul>
+            </div><!-- container end-->
+        </nav>
+        <nav class="lnb-area">
+            <div class="lnb-wrap container clearfix">
+                <h1 class="lnb-logo float-left">
+                    <a role="button" href="#" title="경기문화포털">
+                        <img src="images/logo.svg" class="d-none d-lg-block" width="168" height="50" alt="경기문화포털">
+                        <img src="images/white_logo.svg" class="d-block d-lg-none" width="156" height="26" alt="경기문화포털">
+                    </a>
+                </h1>
+                <ul role="navigation" class="content-nav d-none d-lg-block">
+                    <li role="presentation" class="float-lg-left dropdown">
+                        <a role="button" href="#" title="문화 및 전시" data-toggle="dropdown"><img src="images/menu01.png" alt="문화 및 전시"></a>
+                        <div role="menu" class="dropdown-menu">
+                            <a role="menuitem" class="dropdown-item" href="#">문화행사 일정</a>
+                            <a role="menuitem" class="dropdown-item" href="#">전시 일정</a>
+                            <a role="menuitem" class="dropdown-item" href="#">아카이브</a>
+                            <a role="menuitem" class="dropdown-item" href="#">기타</a>
+                        </div>
+                    </li>
+                    <li role="presentation" class="float-lg-left dropdown">
+                        <a role="button" href="#" title="교육체험" data-toggle="dropdown"><img src="images/menu02.png" alt="교육체험"></a>
+                        <div role="menu" class="dropdown-menu">
+                            <a role="menuitem" class="dropdown-item" href="#">어린이/청소년</a>
+                            <a role="menuitem" class="dropdown-item" href="#">성인/전문가</a>
+                            <a role="menuitem" class="dropdown-item" href="#">기타</a>
+                        </div>
+                    </li>
+                    <li role="presentation" class="float-lg-left dropdown">
+                        <a role="button" href="#" title="문화공간" data-toggle="dropdown"><img src="images/menu03.png" alt="문화공간"></a>
+                        <div role="menu" class="dropdown-menu">
+                            <a role="menuitem" class="dropdown-item" href="#">문화시설</a>
+                            <a role="menuitem" class="dropdown-item" href="#">음악자료</a>
+                            <a role="menuitem" class="dropdown-item" href="#">연구자료</a>
+                            <a role="menuitem" class="dropdown-item" href="#">교육자료</a>
+                            <a role="menuitem" class="dropdown-item" href="#">영상자료</a>
+                        </div>
+                    </li>
+                    <li role="presentation" class="float-lg-right dropdown">
+                        <a role="button" href="#" title="공지 및 공고" data-toggle="dropdown"><img src="images/menu04.png" alt="공지 및 공고"></a>
+                        <div role="menu" class="dropdown-menu">
+                            <a role="menuitem" class="dropdown-item" href="#">공지사항</a>
+                            <a role="menuitem" class="dropdown-item" href="#">교육정보</a>
+                        </div>
+                    </li>
+                    <li role="presentation" class="float-lg-right dropdown">
+                        <a role="button" href="#" title="경기문화포털 소개" data-toggle="dropdown"><img src="images/menu05.png" alt="경기문화포털 소개"></a>
+                        <div role="menu" class="dropdown-menu">
+                            <a role="menuitem" class="dropdown-item" href="#">경기문화포털 소개</a>
+                            <a role="menuitem" class="dropdown-item" href="#">경기문화재단</a>
+                            <a role="menuitem" class="dropdown-item" href="#">찾아오시는 길</a>
+                            <a role="menuitem" class="dropdown-item" href="#">고객센터</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 모바일용 메뉴 버튼 -->
+                <a role="button" class="navbar-toggler float-right d-block d-lg-none" data-toggle="collapse" data-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation" href="#">
+                    <span role="presentation" aria-hidden="true"></span>
+                    <span role="presentation" aria-hidden="true"></span>
+                    <span role="presentation" aria-hidden="true"></span>
+                    <span class="sr-only">메뉴</span>
+                </a>
+            </div>
+        </nav>
+        <!-- 모바일용 슬라이드다운 메뉴 -->
+        <div class="collapse navbar-collapse d-lg-none" id="mobileMenu">
+                <ul role="menu" class="navbar-nav">
+                    <li role="presentation" class="nav-item dropdown">
+                        <a role="button" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">문화/전시</a>
+                        <div role="menu" class="dropdown-menu">
+                            <a role="menuitem" class="dropdown-item" href="#">문화행사 일정</a>
+                            <a role="menuitem" class="dropdown-item" href="#">전시 일정</a>
+                            <a role="menuitem" class="dropdown-item" href="#">아카이브</a>
+                            <a role="menuitem" class="dropdown-item" href="#">기타</a>
+                        </div>
+                    </li>
+                    <li role="presentation" class="nav-item dropdown">
+                        <a role="button" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">교육체험</a>
+                        <div role="menu" class="dropdown-menu">
+                            <a role="menuitem" class="dropdown-item" href="#">어린이/청소년</a>
+                            <a role="menuitem" class="dropdown-item" href="#">성인/전문가</a>
+                            <a role="menuitem" class="dropdown-item" href="#">기타</a>
+                        </div>
+                    </li>
+                    <li role="presentation" class="dropdown"><a href="#" class="nav-link">문화공간</a></li>
+                    <li role="presentation" class="dropdown"><a href="#" class="nav-link">공고/소식</a></li>
+                    <li role="presentation" class="dropdown"><a href="#" class="nav-link">경기문화포털 소개</a></li>
+                </ul>
+        </div>
+    </header>
+    <main id="main">
+    <!-- 문화/행사/전시 정보 슬라이더 -->
+        <section class="content-wrap mb-5">
+           <div class="container carousel-wrap">
+               <div id="mainCarousel" class="slider">
+                              <figure class="carousel-fig">
+                                 <a href="#"><img src="images/slider_redmotion.jpg" class="w-100" alt="정형일발레단 신 도미부인 Red Motion">
+                                      <figcaption class="thumb-caption">
+                                          <h3>정형일발레단 - 新 도미부인 'Red Motion'</h3>
+                                          <p class="description">도미부인 설화를 재해석정형일 예술감독의 해설있는 창작발레! 성적판타지와 이기심, 지식과 권력을</p>
+                                          <p class="date">2017. 10. 27 (금) ~ 2017. 10. 27 (금) 수원SK아트리움</p>
+                                      </figcaption>
+                                  </a>
+                               </figure>
+                               <figure class="carousel-fig">
+                                 <a href="#"><img src="images/slider_moves.jpg" class="w-100" alt="춤 MOVES - 이진숙전">
+                                      <figcaption class="thumb-caption">
+                                          <h3>춤 MOVES - 이진숙展</h3>
+                                          <p class="description">이진숙이 춤을 바라보며 아름다움을 추적하는 방식은 움직임 자체에 대한 몰입, 즉 춤을 추는 것과 다르지 않다. 이를 실현하기 위해 인물 위주의 접근 방식을 배제함으로써</p>
+                                          <p class="date">2017. 10. 18 (수) ~ 2017. 10 .23 (월) 구리아트홀</p>
+                                      </figcaption>
+                                  </a>
+                             </figure>
+                             <figure class="carousel-fig">
+                                 <a href="#"><img src="images/slider_sunwoopiano.jpg" class="w-100" alt="선우예권 피아노 리사이틀">
+                                      <figcaption class="thumb-caption">
+                                          <h3>선우예권 피아노 리사이틀</h3>
+                                          <p class="description">반 클라이번 콩쿠르에서 한국인 최초로 우승하며 마지마 콩투르 도전을 화려하게 마무리한 피아니스트 선우예권이 이어 받는다. 이번 무대에서 세계가 인정한 실력과 젊은 거장의 탁월안 음악해석을 만날 수 있다.</p>
+                                          <p class="date">2017. 12. 17 (일) 구경기도문화의전당</p>
+                                      </figcaption>
+                                  </a>
+                             </figure>
+                             <figure class="carousel-fig">
+                                 <a href="#"><img src="images/slider_arttower.jpg" class="w-100" alt="640아트타워 제 1회 공모 우수작가전">
+                                      <figcaption class="thumb-caption">
+                                          <h3>640아트타워 제 1회 공모 우수작가展 - 이마리아 설치</h3>
+                                          <p class="description">640아트타워는 참신하고 역량 있는 작가를 발굴하고 지원하기 위해 올해 첫 신진작가 공모전을 진행하여 선정된 4명의 우수작가 개인전을 지원합니다.</p>
+                                          <p class="date">2017. 10. 21 (토) ~ 2017. 11. 15 (수) 640아트타워</p>
+                                      </figcaption>
+                                  </a>
+                               </figure>
+                               <figure class="carousel-fig">
+                                 <a href="#"><img src="images/slider_adultedu.jpg" class="w-100" alt="목공체험지도사 양성과정">
+                                      <figcaption class="thumb-caption">
+                                          <h3>목공체험지도사 양성과정</h3>
+                                          <p class="description">화성시생활문화센터는 화성시 관내 선도적인 목공 인프라 함양과 자격취득을 우하여 화성시민을 대상으로 하는 [2017목공체험지도사[3급] 양성과정]의 수강생을 모집하니 많은 신청바랍니다.</p>
+                                          <p class="date">2017. 11. 10 (금) ~ 2017. 11. 11 (토) 화성시생활문화센터 목공DIY스튜디오</p>
+                                      </figcaption>
+                                  </a>
+                             </figure>
+                             <figure class="carousel-fig">
+                                 <a href="#"><img src="images/slider_arirang.jpg" class="w-100" alt="아리랑 음악회">
+                                      <figcaption class="thumb-caption">
+                                          <h3>아리랑 &amp; Fantasy</h3>
+                                          <p class="description">노래뿐만이 아닌 우리의 모든 생활 속에 짙게 깔려있는 '아리랑'은 우리의 전통민요이자.</p>
+                                          <p class="date">2017. 11. 16(목) ~ 2017. 11. 16(목) 고양어울림누리 어울림극장</p>
+                                      </figcaption>
+                                  </a>
+                             </figure>
+                  </div><!-- carousel end-->
+           </div><!-- container end-->
+        </section>
+        <div id="content" class="container">
+            <h2><img src="images/schedule_title.png" alt="문화전시 및 교육일정"></h2>
+            <div class="row">
+                <div class="col-lg-8">
+                   <!-- 문화 공연안내-->
+                    <section role="region" class="schedule mb-5">
+                        <div class="row text-center">
+                            <div class="col-sm-4">
+                                <div class="schedule-group">
+                                    <h3 class="event-title">문화행사</h3>
+                                    <ul class="schedule-info">
+                                        <li><a href="#">뮤지컬/연극/아동극</a></li>
+                                        <li><a href="#">콘서트/음악회</a></li>
+                                        <li><a href="#">무용/발레</a></li>
+                                        <li><a href="#">행사/축제/기타</a></li>
+                                    </ul>
+                                    <div class="schedule-thumb"><a href="#" title="백조의 호수"><img src="images/thumb_swanlake.jpg" class="w-100" alt="백조의 호수"></a></div>
+                                    <div class="schedule-detail">
+                                        <h3 class="heading"><span class="category">무용/발레</span>백조의 호수</h3>
+                                        <a href="#" class="detail-ui" title="자세히 보기">자세히 보기</a>
+                                    </div><!-- schedule-detail end-->
+                                </div><!-- schedule-group end-->
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="schedule-group">
+                                    <h3 class="display-title">전시회</h3>
+                                    <ul class="schedule-info">
+                                        <li><a href="#">진행전시</a></li>
+                                        <li><a href="#">예정전시</a></li>
+                                        <li><a href="#">지난전지</a></li>
+                                        <li><a href="#">아카이브</a></li>
+                                    </ul>
+                                    <div class="schedule-thumb"><a href="#" title="녹 ? 최명展"><img src="images/thumb_display.jpg" class="w-100" alt="녹 ? - 최명展"></a></div>
+                                    <div class="schedule-detail">
+                                        <h3 class="heading"><span class="category">기획/단체전</span>녹 ? - 최명展</h3>
+                                        <a href="#" class="detail-ui display-ui" title="자세히 보기">자세히 보기</a>
+                                    </div><!-- schedule-detail end-->
+                                </div><!-- schedule-group end-->
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="schedule-group">
+                                    <h3 class="edu-title">교육체험</h3>
+                                    <ul class="schedule-info">
+                                        <li><a href="#">어린이</a></li>
+                                        <li><a href="#">청소년</a></li>
+                                        <li><a href="#">성인/전문가</a></li>
+                                        <li><a href="#">기타</a></li>
+                                    </ul>
+                                    <div class="schedule-thumb"><a href="#" title="2017 NJP 창작소 하반기 청소년 도슨트 프로그램 도전 NJP 도슨트"><img src="images/thumb_edu01.jpg" class="w-100" alt="2017 NJP 창작소 - 하반기 청소년 도슨트 프로그램 [도전! NJP 도슨트]"></a></div>
+                                    <div class="schedule-detail">
+                                        <h3 class="heading"><span class="category">청소년</span>2017 NJP 창작소</h3>
+                                        <a href="#" class="detail-ui edu-ui" title="자세히 보기">자세히 보기</a>
+                                    </div><!-- schedule-detail end-->
+                                </div><!-- schedule-group end-->
+                            </div>
+                        </div>
+                    </section>
+                    <!-- 뉴스레터 받기 -->
+                    <section role="region" class="news-letter mb-5">
+                        <dl class="row clearfix">
+                                <dt class="col-md-4">
+                                       <div class="heading-box">
+                                            <h3><img src="images/newsletter_title.png" title="뉴스레터" alt="뉴스레터"></h3>
+                                            <p>다양한 문화예술정보를<br>메일로 발송해 드립니다.</p>
+                                       </div>
+                                </dt>
+                                <dd class="col-md-8">
+                                   <div class="heading-filed">
+                                            <form role="form">
+                                                <dt class="sr-only"><lable for="email">이메일입력</lable></dt>
+                                                <dd><input type="text" name="name" id="name" class="name-filed text-center" placeholder="이름입력"></dd>
+                                                <dd><input type="email" name="email" id="email" class="email-filed text-center" placeholder="이메일을 입력해 주세요"></dd>
+                                                <dd><button type="button" class="apply-ui">신청하기</button></dd>
+                                            </form>
+                                    </div>
+                                </dd>
+                        </dl>
+                    </section>
+                    <section role="region" class="bbs">
+                        <div class="row">
+                            <article class="col-lg-6 news-info  mb-5">
+                                <h2><img src="images/notice_title.png" title="공지 및 공고" alt="공지 및 공고">
+                                <a href="#" role="button" class="more-ui"><img src="images/more_btn.svg" width="18" height="18" title="더보기" alt="더보기"></a>
+                                </h2>
+                                <table class="bbs-table">
+                                    <colgroup>
+                                         <col style="width: 20%">
+                                         <col style="width: *">    
+                                    </colgroup>
+                                    <thead class="sr-only">
+                                        <tr>
+                                            <th>분류</th>
+                                            <th>소식</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>[지원공고]</td>
+                                            <td><a href="">2017 사회문화예술교육지원 100인의 아름...</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>[입찰공고]</td>
+                                            <td><a href="">경기도 대표소리 라디오 다큐 제작방송...</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>[채용공고]</td>
+                                            <td><a href="">경기문화재단 문예진흥팀 단기 기간제...</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>[지원공고]</td>
+                                            <td><a href="">2017 사회문화예술교육지원 100인의 아름...</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>[입찰공고]</td>
+                                            <td><a href="">경기도 대표소리 라디오 다큐 제작방송...</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>[채용공고]</td>
+                                            <td><a href="">경기문화재단 문예진흥팀 단기 기간제...</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>[지원공고]</td>
+                                            <td><a href="">2017 사회문화예술교육지원 100인의 아름...</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                            <article class="col-lg-6 education-info mb-5">
+                                <h2><img src="images/eduinfo_title.png" title="교육정보" alt="교육정보">
+                                <a href="#" role="button" class="more-ui"><img src="images/more_btn.svg" width="18" height="18" title="더보기" alt="더보기"></a>
+                                </h2>
+                                <table class="bbs-table">
+                                    <colgroup>
+                                         <col style="width: 20%">
+                                         <col style="width: *">    
+                                    </colgroup> 
+                                    <thead class="sr-only">
+                                        <tr>
+                                            <th>분류</th>
+                                            <th>소식</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>[어린이]</td>
+                                            <td><a href="">초등 하브루타 독서토론</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>[청소년]</td>
+                                            <td><a href="">미술관 직업탐방 미술관 사람들...</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>[전문가]</td>
+                                            <td><a href="">목공체험지도사 양성과정</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>[성인]</td>
+                                            <td><a href="">2017 성남문화재단 전문인력 양성 특수교육 전문...</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>[어린이]</td>
+                                            <td><a href="">2017 한책축제 아빠 얼굴 그리기 행사안내</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>[청소년]</td>
+                                            <td><a href="">옛 이야기, 힙합! 힙힙힙합!</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>[성인]</td>
+                                            <td><a href="">아트페스타 헬로우문래 현장스태프 모집</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+                <aside class="col-lg-4">
+                    <!-- 구글 아트프로젝트 -->
+                    <section role="region" class="mb-5">
+                       <h2><img src="images/googleart_title.png" title="구글 아트프로젝트" alt="구글 아트프로젝트"></h2> 
+                       <div class="google-art-box">
+                           <a href="" title="2015 옆집에 사는 예술가 정정엽">
+                              <img src="images/googleart_img01.jpg" class="w-100" alt="2015 옆집에 사는 예술가 정정엽">
+                              <div class="movie-box">
+                                   <span class="play-btn"><img src="images/play_btn.svg" width="60" height="60" alt="실행"></span>
+                              </div>
+                           </a>   
+                       </div><!-- google-art-box end-->
+                    </section>
+                    <!-- 프로모션 -->
+                    <section role="region">
+                       <h2><img src="images/pomotion_title.png" title="프로모션" alt="프로모션"></h2> 
+                       <div id="promotionCarousel" class="promotion-slider">
+                           <figure class="promotion-fig">
+                                 <a href="#"><img src="images/promotin_slider01.jpg" class="w-100" alt="구석기 비너스가 부르는 노래">
+                                      <figcaption class="thumb-caption text-center">구석기 비너스가 부르는 노래</figcaption>
+                                  </a>
+                             </figure>
+                             <figure class="promotion-fig">
+                                 <a href="#"><img src="images/promotin_slider02.jpg" class="w-100" alt="공공하는예술 아카이브전시">
+                                      <figcaption class="thumb-caption text-center">공공하는예술 아카이브전시</figcaption>
+                                  </a>
+                             </figure>
+                             <figure class="promotion-fig">
+                                 <a href="#"><img src="images/promotin_slider03.jpg" class="w-100" alt="국악이 바람이 난 날">
+                                      <figcaption class="thumb-caption text-center">국악이 바람이 난 날</figcaption>
+                                  </a>
+                             </figure>
+                         </div>
+                    </section>
+                </aside>
+            </div><!-- row end-->
+        </div>
+        <section role="region" class="banner">
+                <div class="container">
+                   <article class="banner-box text-sm-center clearfix">
+                    <ul>
+                        <li><a href=""><i class="fa fa-facebook fa-lg" aria-hidden="true"></i><span>Facebook</span></a></li>
+                        <li><a href=""><i class="fa fa-twitter fa-lg" aria-hidden="true"></i><span>Tweeter</span></a></li>
+                        <li><a href=""><i class="fa fa-youtube " aria-hidden="true"></i><span>Youtube</span></a></li>
+                        <li><a href=""><i class="fa fa-instagram fa-lg" aria-hidden="true"></i><span>Instagram</span></a></li>
+                        <li><a href=""><i class="fa fa-google fa-lg" aria-hidden="true"></i><span>Google Arts Project</span></a></li>
+                    </ul>
+                    </article>
+                </div>
+        </section>
+    </main>
+    <!-- 푸터 영역-->
+    <footer role="footerinfo" id="footer">
+        <div class="container">
+           <div class="row">
+                <div class="footer-logo col-lg-6 text-center text-lg-left">
+                    <img src="images/foot_white_logo.svg" class="mb-3" width="187" height="31" alt="경기문화재단">
+                    <address>재단법인 경기문화재단 (16488 ) 경기도 수원시 팔달구 인계로 178 (인계동)<br>
+    대표전화 031-231-7200 홈페이지 이용문의 031-231-7264, 7266, 7268</address>
+                    <p class="copyright">Copyright © 2016 재단법인 경기문화재단. All Rights Reserved.</p>
+                </div>
+                <nav role="navigation" class="footer-nav col-lg-2 text-center text-lg-left mb-3">
+                    <ul>
+                        <li><a href="">재단소개</a></li>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><a href="">컨텐츠등록요청</a></li>
+                        <li><a href="">오픈 API</a></li>
+                    </ul>
+                </nav>
+                <div class="btn-group dropup col-lg-4 text-center text-lg-right">
+                      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FAMILY SITE</button>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">경기문화재단</a>
+                          <a class="dropdown-item" href="#">경기도어린이박물관</a>
+                          <a class="dropdown-item" href="#">경기도박물관</a>
+                          <a class="dropdown-item" href="#">백남준아트센터</a>
+                          <a class="dropdown-item" href="#">경기도미술관</a>
+                          <a class="dropdown-item" href="#">실학박물관</a>
+                          <a class="dropdown-item" href="#">전곡선사박물관</a>
+                          <a class="dropdown-item" href="#">경기창작센터</a>
+                          <a class="dropdown-item" href="#">경기문화재연구원</a>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="plugin/jquery-ui/js/jquery-ui.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugin/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+window.onload=function(){
+    $( "#searchOption" ).selectmenu();
+};
+</script> 
+</body>
+</html>
