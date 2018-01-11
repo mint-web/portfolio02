@@ -1,3 +1,7 @@
+/*
+     * slick 플러그인사용
+     * Bootstrap 내장 carousel기능을 사용할려했지만 스크린 너비에 맞춰 슬라이드 갯수 조절이 불가능하므로 비사용
+*/
 $(function() {
   $('#mainCarousel').slick({
       dots: true,
